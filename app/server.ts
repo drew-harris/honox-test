@@ -11,8 +11,8 @@ baseApp.use(async (c, next) => {
 });
 
 const app = createApp({
-  app: baseApp as any,
-}) as typeof baseApp;
+  app: baseApp,
+});
 
 showRoutes(app);
 

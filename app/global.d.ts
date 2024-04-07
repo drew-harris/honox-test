@@ -7,8 +7,8 @@ type Head = {
 
 declare module "hono" {
   interface Env {
-    Variables: {};
-    Bindings: {};
+    // Variables: {};
+    // Bindings: {};
   }
 
   interface ContextVariableMap {
@@ -16,9 +16,8 @@ declare module "hono" {
   }
 
   interface ContextRenderer {
-    (
-      content: string | Promise<string>,
-      head?: Head,
-    ): Response | Promise<Response>;
+    (content: string | Promise<string>, head?: Head):
+      | Response
+      | Promise<Response>;
   }
 }
