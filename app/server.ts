@@ -3,7 +3,7 @@ import { Hono } from "hono";
 import { createApp } from "honox/server";
 import { elastic } from "./elastic";
 
-const baseApp = new Hono<any>();
+const baseApp = new Hono();
 
 baseApp.use(async (c, next) => {
   c.set("elastic", elastic);
@@ -11,8 +11,9 @@ baseApp.use(async (c, next) => {
 });
 
 const app = createApp({
-  app: baseApp,
-});
+  app: baseApp as any,
+}) as typeof baseApp;
 
 showRoutes(app);
+
 export default app;

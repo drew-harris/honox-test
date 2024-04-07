@@ -1,7 +1,6 @@
 import { elastic } from "../elastic";
 
 export default async function ElasticInfoPage() {
-
   const info = await elastic.info();
 
   return (
@@ -9,7 +8,7 @@ export default async function ElasticInfoPage() {
       <a href="/" class="underline cursor-pointer">
         Back
       </a>
-      <pre class="max-w-lg whitespace-pre-wrap break-words m-auto my-56 border">
+      <pre class="p-4 border border-black max-w-lg whitespace-pre-wrap break-words m-auto mt-48">
         {JSON.stringify(info)}
       </pre>
     </div>
