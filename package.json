@@ -1,0 +1,22 @@
+{
+  "name": "basic",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode client && vite build"
+  },
+  "private": true,
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.13.0",
+    "@t3-oss/env-core": "^0.9.2",
+    "hono": "^4.2.2",
+    "honox": "^0.1.9",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.0.12",
+  }
+}
