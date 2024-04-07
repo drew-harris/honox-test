@@ -22,6 +22,7 @@ export default defineConfig(({ mode }) => {
     return {
       plugins: [nodeServerPlugin(), honox()],
       ssr: {
+        target: "node",
         external: ["@elastic/elasticsearch"],
       },
     };
