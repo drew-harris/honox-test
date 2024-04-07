@@ -1,7 +1,9 @@
 import { elastic } from "../elastic";
 
-export default async function () {
+export default async function ElasticInfoPage() {
+
   const info = await elastic.info();
+
   return (
     <div class="p-4">
       <a href="/" class="underline cursor-pointer">
